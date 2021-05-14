@@ -1,0 +1,296 @@
+#draft code = no graphics bro
+
+import random
+import timeit
+import turtle
+def main():
+    Spacer = """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    """
+    print (Spacer)
+    if (len(input("Press enter key to enter the game.")) >= 0):
+        y = 1
+        print (Spacer)
+        print ("""WELCOME TO THE CHOCOROOM GAME.
+This is a game not for the faint of heart. You will choose
+between the following game modes and determine if you are a
+legend:""")
+        while (y == 1):
+            print ("""
+    A = Addition
+    B = Subtraction
+    C = Multiplication
+    D = division
+    E = Exponent
+    Q = QUIT
+
+Please type the letter of your desired game mode below:
+
+            """)
+            x = input("GAME MODE SELECTION: ")
+            if x == ("A") or x == "a":
+                print (Spacer)
+                addition(Spacer)
+            elif x == ("B") or x == "b":
+                print (Spacer)
+                subtraction(Spacer)
+            elif x == ("C") or x == "c":
+                print (Spacer)
+                multiplication(Spacer)
+            elif x == ("D") or x == "d":
+                print (Spacer)
+                division(Spacer)
+            elif x == ("E") or x == "e":
+                print (Spacer)
+                exponent(Spacer)
+            elif x == ("Q") or x == "q":
+                print(Spacer)
+                print("Goodbye.")
+                break
+            else:
+                print(Spacer)
+                print("""Not valid game mode bro. Try again
+
+
+                """)
+
+def addition(Spacer):
+    print ("""WELCOME TO ADDITION.
+
+Your challenge is to answer these questions. Correct, preferably.
+The farther you get, the higher your level. Don't mess up, or you
+automatically lose.
+
+HIT ENTER when ready to start. HIT Q to return to main menu.
+
+    """)
+    Starter = input()
+    if Starter == "Q" or Starter == "q":
+        print(Spacer)
+        print("You quit. Guess you hate addition:(")
+        if len(input("Press enter to return to main.")) >= 0:
+            print(Spacer)
+    else:
+        print(Spacer)
+        end = 1
+        y = 1
+        while (y == 1):
+            first = random.randint(0, end)
+            second = random.randint(0, end)
+            answer = first + second
+            print (first, " + ", second, " ?")
+            madeit = False
+            x = input()
+            if x == str(answer):
+                end = end + 1
+                print(Spacer)
+                print("""CORRECT!
+
+                """)
+            else:
+                print(Spacer)
+                print ('FINAL SCORE: ' + str(end - 1))
+                print ("Failure. You lose. Press enter to restart")
+                if (len(input()) >= 0):
+                    y = 2
+        print (Spacer)
+def multiplication(Spacer):
+    print ("""WELCOME TO MULTIPLICATION.
+
+Your challenge is to answer these questions. Correct, preferably.
+The farther you get, the higher your level. Don't mess up, or you
+automatically lose.
+
+HIT ENTER when ready to start. HIT Q to return to main menu.
+
+    """)
+    Starter = input()
+    if Starter == "Q" or Starter == "q":
+        print(Spacer)
+        print("You quit. Guess you hate multiplication:(")
+        if len(input("Press enter to return to main.")) >= 0:
+            print(Spacer)
+    else:
+        print(Spacer)
+        end = 1
+        y = 1
+        while (y == 1):
+            first = random.randint(0, end)
+            second = random.randint(0, end)
+            answer = first * second
+            print (first, " * ", second, " ?")
+            madeit = False
+            x = input()
+            if x == str(answer):
+                end = end + 1
+                print(Spacer)
+                print("""CORRECT!
+
+                """)
+            else:
+                print(Spacer)
+                print ('FINAL SCORE: ' + str(end - 1))
+                print ("Failure. You lose. Press enter to restart")
+                if (len(input()) >= 0):
+                    y = 2
+        print (Spacer)
+def subtraction(Spacer):
+    print ("""WELCOME TO SUBTRACTION.
+
+Your challenge is to answer these questions. Correct, preferably.
+The farther you get, the higher your level. Don't mess up, or you
+automatically lose.
+
+HIT ENTER when ready to start. HIT Q to return to main menu.
+
+    """)
+    Starter = input()
+    if Starter == "Q" or Starter == "q":
+        print(Spacer)
+        print("You quit. Guess you hate subtraction:(")
+        if len(input("Press enter to return to main.")) >= 0:
+            print(Spacer)
+    else:
+        print(Spacer)
+        end = 1
+        y = 1
+        while (y == 1):
+            first = random.randint(0, end)
+            second = random.randint(0, end)
+            answer = first - second
+            print (first, " - ", second, " ?")
+            start = timeit.timeit()
+            madeit = False
+            x = input()
+            if x == str(answer):
+                end = end + 1
+                print(Spacer)
+                print("""CORRECT!
+
+                """)
+            else:
+                print(Spacer)
+                print ('FINAL SCORE: ' + str(end - 1))
+                print ("Failure. You lose. Press enter to restart")
+                if (len(input()) >= 0):
+                    y = 2
+        print (Spacer)
+
+def division(Spacer):
+    print ("""WELCOME TO DIVISION.
+
+Your challenge is to answer these questions. Correct, preferably.
+The farther you get, the higher your level. Don't mess up, or you
+automatically lose.
+
+HIT ENTER when ready to start. HIT Q to return to main menu. ALSO
+ROUND DOWN FOR ADDITION BRO
+
+    """)
+    Starter = input()
+    if Starter == "Q" or Starter == "q":
+        print(Spacer)
+        print("You quit. Guess you hate division. I understand:)")
+        if len(input("Press enter to return to main.")) >= 0:
+            print(Spacer)
+    else:
+        print(Spacer)
+        end = 1
+        y = 1
+        while (y == 1):
+            first = random.randint(1, end)
+            second = random.randint(1, end)
+            answer = first // second
+            print (first, " / ", second, " ?")
+            madeit = False
+            x = input()
+            if x == str(answer):
+                end = end + 1
+                print(Spacer)
+                print("""CORRECT!
+
+                """)
+            else:
+                print(Spacer)
+                print ('FINAL SCORE: ' + str(end - 1))
+                print ("Failure. You lose. Press enter to restart")
+                if (len(input()) >= 0):
+                    y = 2
+        print (Spacer)
+
+def exponent(Spacer):
+    print ("""WELCOME TO EXPONENTS.
+
+Your challenge is to answer these questions. Correct, preferably.
+The farther you get, the higher your level. Don't mess up, or you
+automatically lose.
+
+HIT ENTER when ready to start. HIT Q to return to main menu.
+
+    """)
+    Starter = input()
+    if Starter == "Q" or Starter == "q":
+        print(Spacer)
+        print("You quit. Guess you hate exponents:(")
+        if len(input("Press enter to return to main.")) >= 0:
+            print(Spacer)
+    else:
+        print(Spacer)
+        end = 1
+        y = 1
+        while (y == 1):
+            first = random.randint(0, end)
+            second = random.randint(0, end)
+            answer = first ** second
+            print (first, " ^ ", second, " ?")
+            start = timeit.timeit()
+            madeit = False
+            x = input()
+            if x == str(answer):
+                end = end + 1
+                print(Spacer)
+                print("""CORRECT!
+
+                """)
+            else:
+                print(Spacer)
+                print ('FINAL SCORE: ' + str(end - 1))
+                print ("Failure. You lose. Press enter to restart")
+                if (len(input()) >= 0):
+                    y = 2
+        print (Spacer)
+
+
+main()
